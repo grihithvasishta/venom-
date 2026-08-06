@@ -1,0 +1,29 @@
+{
+  "name": "venom-cli-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VENOM CLI - Node.js engine layer",
+  "main": "orchestrator/index.js",
+  "scripts": {
+    "install": "node -e \"\"",
+    "build": "npm run build:ts",
+    "build:ts": "tsc --project tsconfig.json",
+    "build:native": "node-gyp rebuild",
+    "build:all": "npm run build && npm run build:native",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "dev": "tsc --watch",
+    "start": "node orchestrator/index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "node-api-headers": "^1.9.0",
+    "node-gyp": "^12.4.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

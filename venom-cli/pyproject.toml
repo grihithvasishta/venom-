@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "venom-cli"
+version = "1.0.0"
+description = "High-performance, fully agentic CLI tool with multi-model orchestration via NVIDIA NIM"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "VENOM Contributors"}
+]
+keywords = ["cli", "agentic", "ai", "nvidia", "nim", "coding-assistant"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: TypeScript",
+    "Programming Language :: C",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "nodejs-wheel>=20.0",
+    "requests>=2.31.0",
+    "python-telegram-bot>=21.0",
+    "asyncio-extras>=1.3",
+]
+
+[project.scripts]
+venom = "venom.main:main"
+
+[project.urls]
+Homepage = "https://github.com/venom-cli/venom"
+Repository = "https://github.com/venom-cli/venom"
+Issues = "https://github.com/venom-cli/venom/issues"
+
+[tool.setuptools.packages.find]
+include = ["venom*"]
+
+[tool.setuptools.package-data]
+venom = [
+    "*.ts",
+    "*.js",
+    "*.js.map",
+    "native/*.c",
+    "native/*.node",
+    "package.json",
+    "tsconfig.json",
+]

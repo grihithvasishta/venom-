@@ -1,0 +1,18 @@
+node_modules/
+build/
+dist/
+
+# TypeScript build artifacts (emitted alongside the source files)
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map
+
+# Native build artifacts
+*.node
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
